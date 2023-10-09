@@ -1,0 +1,32 @@
+<h2>Çizilen Çokgen Bilgileri</h2>
+
+<div class="table-container" *ngIf="responseData.length > 0"> 
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Number</th>
+        <th>Edge Count</th>
+        <th>Coordinates</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let model of responseData">
+        <td>{{ model.name }}</td>
+        <td>{{ model.number }}</td>
+        <td>{{ model.edgeCount }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let coordinate of model.coordinates">
+              {{ coordinate[0] }}, {{ coordinate[1] }}
+            </li>
+          </ul>
+        </td>
+        <td>
+          <button (click)="deleteModel(model)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

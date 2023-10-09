@@ -1,0 +1,40 @@
+/* Stil tabloyu daha güzel hale getirir ve aşağı kaydırılabilir yapar */
+.table-container {
+    max-height: 400px; /* İstenilen maksimum yükseklik */
+    overflow-y: auto; /* Aşağı kaydırma çubuğunu görünür kılar */
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 5px 0;
+  }
+  

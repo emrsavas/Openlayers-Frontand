@@ -1,0 +1,35 @@
+.navbar {
+  background-color: #3c8dbc; 
+  height: 50px; 
+  border-bottom: 3px solid #367fa9;
+}
+
+
+.navbar-nav {
+  list-style: none; 
+  display: flex;
+  align-items: center; 
+  height: 100%; 
+}
+.nav-item {
+  margin-right: 15px; 
+}
+
+.nav-link {
+  color: #ffffff; 
+  font-weight: bold; 
+  text-decoration: none; 
+  transition: color 0.3s; 
+  padding: 10px 20px;
+  border-radius: 5px; 
+  background-color: #367fa9; 
+}
+
+.nav-link:hover {
+  color: #ffffff; 
+}
+
+
+.nav-item.active .nav-link {
+  color: #f39c12;
+}

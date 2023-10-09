@@ -1,0 +1,27 @@
+<div id="map" class="map"></div>
+
+<div class="map-buttons">
+  <button id="addDrawingButton" class="add-drawing-button">
+    <i class="fas fa-pencil-alt"></i> Çizim Ekle
+  </button>
+  <button id="QueryDrawingButton" class="query-drawing-button" (click)="openDialog()">
+    <i class="fas fa-search"></i> Çizim Sorgula
+  </button>
+</div>
+
+<div id="popup" class="ol-popup" [hidden]="!popupVisible" >
+  <a href="#" id="popup-closer" class="ol-popup-closer" (click)="closePopup()"></a>
+  <div class="popup-content">
+    <form>
+      <div class="form-group">
+        <label for="name">İsim:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="name" required="*"placeholder="Lütfen boş bırakmayınız">
+      </div>
+      <div class="form-group">
+        <label for="number">Numara:</label>
+        <input type="text" id="number" name="number" [(ngModel)]="number" required="*"placeholder="Lütfen boş bırakmayınız">
+      </div>
+    </form>
+    <button type="button" (click)="eklesene()">Ekle</button>
+  </div>
+</div>
